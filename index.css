@@ -75,3 +75,16 @@ pre {
 #draw {
   font-size: 48px;
 }
+
+h1 {
+  font-size: 90%;
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+}
+
+p {
+  font-size: 80%;
+}

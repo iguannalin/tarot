@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
         const index = drawCard(data.length);
         tarotCard = `${data[index].title}**${data[index].description}**${btoa(data[index].image.display.url)}`;
         console.log({cardIndices, tarotCard});
-        const text = `<!DOCTYPE html><html> <head> <title>${tarotCard.name}</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://iguannalin.github.io/tarot/index.css"/><script src=https://iguannalin.github.io/tarot/tarot.js></script></head> <body><div id="overlay"></div> <div id="container" data-tarot=${tarotCard}></div></body></html>`;
+        const text = `<!DOCTYPE html><html> <head> <title>${tarotCard.name}</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://iguannalin.github.io/tarot/index.css"/><script src=https://iguannalin.github.io/tarot/tarot.js></script></head> <body><div id="container" data-tarot=${tarotCard}></div></body></html>`;
         const blob = new Blob([text], {type: "text/html"});
         const blobUrl = URL.createObjectURL(blob);
         window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=200,height=300,top=500,left=${(i*300)+100}`);
