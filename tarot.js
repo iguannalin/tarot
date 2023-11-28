@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     const p = document.createElement("p");
     p.innerText = card[1];
     const image = document.createElement("img");
-    image.src = atob(card[2]);
+    image.src = card[2];
     container.appendChild(h1);
     container.appendChild(image);
     container.appendChild(p);
