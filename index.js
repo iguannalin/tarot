@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
   function drawCard(max, cards) {
     let i = getRandomInt(0,max);
     if (cardIndices.includes(i)) return drawCard(max, cards);
-    else if (!cards[i].image.display) return drawCard(max, cards);
+    else if (!cards[i]?.image?.square) return drawCard(max, cards);
     cardIndices.push(i);
     return cards[i];
   }
@@ -27,8 +27,8 @@ window.addEventListener("load", () => {
       for (let i = 0; i < 3; i++) {
         const card = drawCard(d.contents.length, d.contents);
         console.log(card);
-        tarotCard = `${card.title.replaceAll(`"`,`'`)}**${card.description.replaceAll(`"`,`'`)}**${card.image.display.url}`;
-        const text = `<!DOCTYPE html><html> <head> <title>${tarotCard.name}</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://iguannalin.github.io/tarot/index.css"/><script src=https://iguannalin.github.io/tarot/tarot.js></script></head> <body><div id="container" data-tarot=${tarotCard}></div></body></html>`;
+        tarotCard = `${card.title?.replaceAll(`"`,`'`)}**${card.description?.replaceAll(`"`,`'`)}**${card.image.display.url}`;
+        const text = `<!DOCTYPE html><html> <head> <title>${tarotCard.name}</title> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="stylesheet" href="https://iguannalin.github.io/tarot/index.css"/><script src=https://iguannalin.github.io/tarot/tarot.js></script></head> <body><div id="container" data-tarot="${tarotCard}"></div></body></html>`;
         const blob = new Blob([text], {type: "text/html"});
         const blobUrl = URL.createObjectURL(blob);
         window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=200,height=300,top=500,left=${(i*300)+100}`);
