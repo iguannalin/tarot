@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   const button = document.getElementById("draw");
   const input = document.getElementById("prompt");
   
-  let channelID = "hyperspace-ea2ygebllhw";
+  let channelID = "thesaurus-unqdpo2f-q8";
   input.onchange = (e) => channelID = e.target.value;
 
   let cardIndices = [];
