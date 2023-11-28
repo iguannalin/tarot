@@ -28,6 +28,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column wrap;
+}
+
+input {
+  box-shadow: 0px 2px 4px 2px var(--shadow-color);
+  border: 0;
+  border-radius: 2px;
+  margin: 12px;
+  font-size: 16px;
+}
+
+.prompt-box {
+  color: var(--main-text-color);
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+}
+
+button {
+  border-radius: 2px;
+  background-color: transparent;
+  transform: rotateZ(200deg);
+  border: none;
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  text-shadow: var(--shadow-color) -2px 2px 20px;
+}
+
+input:hover, input:active {
+  box-shadow: var(--shadow-color) -2px 2px 20px;
 }
 
 pre {
