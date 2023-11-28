@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: column;
 }
 
 input {
@@ -81,7 +81,7 @@ h1 {
 }
 
 img {
-  max-width: 80%;
+  max-width: 60%;
   height: auto;
 }
 
