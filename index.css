@@ -26,8 +26,12 @@ body {
   justify-content: center;
 }
 
-#container {
+#prompt-container {
   display: flex;margin: 12px;overflow: scroll;align-items: center;flex-flow: column wrap;
+}
+
+#container {
+  display: flex;margin: 12px;overflow: scroll;align-items: center;flex-flow: column;
 }
 
 input {
